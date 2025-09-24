@@ -10,61 +10,43 @@
   <header>
     <h1>Noticias</h1>
     <nav>
-      <ul>
-        <li><a href="#noticia1">Noticia 1</a></li>
-        <li><a href="#noticia2">Noticia 2</a></li>
-      </ul>
+      <details>
+        <summary>Noticias Internacionales</summary>
+        <ul>
+          <li><a href="#noticia_internacional1">Noticia 1</a></li>
+          <li><a href="#noticia_internacional2">Noticia 2</a></li>
+        </ul>
+      </details>
+      <details>
+        <summary>Noticias Nacionales</summary>
+        <ul>
+          <li><a href="#noticia_nacional1">Noticia 3</a></li>
+          <li><a href="#noticia_nacional2">Noticia 4</a></li>
+        </ul>
+      </details>
     </nav>
   </header>
   <main>
     <ol>
-      <li><h2 id="noticia1">Rosenberg: Russia brushes off Trump's claim of 'paper tiger' in aimless war</h2></li>
-      <ul>
-        <li><h3>Introduction</h3></li>
-        <p>Enabling robots to learn and improve directly in their deployment environments remains a fundamental challenge in robotics. Recently, significant progress has been made in training visuomotor control policies in the real world with behavior cloning (BC) from human demonstrations [1, 2, 3, 4, 5, 6, 7, 8, 9]. However, this success requires significant infrastructure, as well as numerous hours of manual and cumbersome data collection. Even if unlimited data could be collected for every task, not only is human teleoperator performance generally suboptimal, but there is also emerging evidence that policy performance saturates with increasing demonstrations [10, 6, 11, 12, 13].</p>
-        <br>
-        <p>Reinforcement learning (RL) offers a complementary paradigm: agents learn autonomously through trial and error in the environment. Deep RL has shown great success in various domains [14, 15, 16, 17, 18, 19, 20, 21], including in-hand manipulation [22, 23] and locomotion [24, 25, 26, 27]. However, strong RL performance generally requires large amounts of data from online interactions, so its application has been mainly in simulation [28, 29] since real-world data are expensive and potentially unsafe to gather in large amounts.</p>
-        <br>
-        <p>
-        A natural direction to improve BC policies is to leverage online RL [12, 30, 31, 32], combining the strengths of each: BC policies provide a strong prior that can regularize exploration in the RL process, while online RL enhances policy performance by learning from interactions with the environment. However, modern BC architectures are typically deep models with tens of millions to billions of parameters that utilize action chunking or diffusion-based approaches, which can make it challenging to apply RL methods directly to optimize the policy. A simple yet powerful recipe that avoids several of the above issues is residual RL [33, 34, 35, 36, 12, 32, 31], where RL is applied not to learn a full policy, but only to learn corrective terms on top of a fixed base controller. Previous work has demonstrated that residual RL can indeed enhance the reliability of a pre-trained policy. Still, it has so far been limited to learning in simulation [12, 32, 31] or demonstrating results in simple or constrained settings [33, 34, 35, 36]; Applications to high-DoF systems learning directly in the real world are still lacking.</p>
-      </ul>
-      <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/bdda/live/6abe6e60-994a-11f0-b42e-f379dfea869d.jpg.webp" alt="articulo1" width="500">
-      <li><h2 id="noticia2">CAR-Flow: Condition-Aware Reparameterization Aligns Source and Target for Better Flow Matching</h2></li>
-      <ul>
-        <li><h3>Introduction</h3></li>
-        <p>Conditional generative models enable to draw samples conditioned on an external variable—for example, a class label, a text caption, or a semantic mask. They are a key technology that has advanced significantly in the last decade, from variational auto-encoders (VAEs) (Kingma and Welling, 2014) and generative adversarial nets (Goodfellow et al., 2014) to diffusion (Ho et al., 2020; Song et al., 2021a, b; Dhariwal and Nichol, 2021; Peebles and Xie, 2023; Rombach et al., 2022; Nichol and Dhariwal, 2021) and flow-matching (Ma et al., 2024; Liu et al., 2023; Lipman et al., 2023; Albergo and Vanden-Eijnden, 2023; Albergo et al., 2023).</p>
-        <br>
-        <p>State-of-the-art diffusion and flow-matching frameworks accomplish conditional generation by using a trained deep net to trace a probability path that progressively transforms samples from a simple source distribution into the rich, condition-dependent target distribution. A popular choice for the source distribution is a single, condition-agnostic standard Gaussian, independent of the condition. Consequently, the conditioning signal enters only through the network itself: in flow matching, for instance, the model predicts a velocity field where the condition is commonly incorporated via embeddings or adaptive normalization layers. Although this strategy has enabled impressive results, this design forces the network to shoulder two tasks simultaneously—(i) transporting probability mass to the correct region of the data manifold, and (ii) encoding the semantic meaning of the condition. Because different conditions often occupy distant parts of that manifold, the dual burden stretches the learned trajectory, slows convergence, and can impair sample quality and diversity.</p>
-        <br>
-        <p>In this paper, we alleviate this burden by letting the distributions themselves depend on the condition. First, we endow the source distribution with condition-awareness through a lightweight map, i.e., the source distribution map. Hence, every condition has its own source distribution. The same idea can be mirrored to the target distribution using another lightweight map, i.e., the target distribution map, that we require to be approximately invertible to keep sampling tractable. The resulting push-forward chain is illustrated in Figure 1. Intuitively, the target distribution map and its approximated inverse correspond to the encoder and decoder, commonly used in latent diffusion pipelines (Rombach et al., 2022). Differently, here, the target distribution map is explicitly conditional, aligning our formulation with recent latent-space conditioning approaches that embed semantic information directly into the latent representation (Wu et al., 2024; Leng et al., 2025; Yao et al., 2025).</p>
-      </ul>
-      <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/381f/live/ad907870-9899-11f0-9b4d-3db5bd560027.jpg.webp" alt="articulo2" width="400">
-      <li><h2 id="noticia2">CAR-Flow: Condition-Aware Reparameterization Aligns Source and Target for Better Flow Matching</h2></li>
-      <ul>
-        <li><h3>Introduction</h3></li>
-        <p>Conditional generative models enable to draw samples conditioned on an external variable—for example, a class label, a text caption, or a semantic mask. They are a key technology that has advanced significantly in the last decade, from variational auto-encoders (VAEs) (Kingma and Welling, 2014) and generative adversarial nets (Goodfellow et al., 2014) to diffusion (Ho et al., 2020; Song et al., 2021a, b; Dhariwal and Nichol, 2021; Peebles and Xie, 2023; Rombach et al., 2022; Nichol and Dhariwal, 2021) and flow-matching (Ma et al., 2024; Liu et al., 2023; Lipman et al., 2023; Albergo and Vanden-Eijnden, 2023; Albergo et al., 2023).</p>
-        <br>
-        <p>State-of-the-art diffusion and flow-matching frameworks accomplish conditional generation by using a trained deep net to trace a probability path that progressively transforms samples from a simple source distribution into the rich, condition-dependent target distribution. A popular choice for the source distribution is a single, condition-agnostic standard Gaussian, independent of the condition. Consequently, the conditioning signal enters only through the network itself: in flow matching, for instance, the model predicts a velocity field where the condition is commonly incorporated via embeddings or adaptive normalization layers. Although this strategy has enabled impressive results, this design forces the network to shoulder two tasks simultaneously—(i) transporting probability mass to the correct region of the data manifold, and (ii) encoding the semantic meaning of the condition. Because different conditions often occupy distant parts of that manifold, the dual burden stretches the learned trajectory, slows convergence, and can impair sample quality and diversity.</p>
-        <br>
-        <p>In this paper, we alleviate this burden by letting the distributions themselves depend on the condition. First, we endow the source distribution with condition-awareness through a lightweight map, i.e., the source distribution map. Hence, every condition has its own source distribution. The same idea can be mirrored to the target distribution using another lightweight map, i.e., the target distribution map, that we require to be approximately invertible to keep sampling tractable. The resulting push-forward chain is illustrated in Figure 1. Intuitively, the target distribution map and its approximated inverse correspond to the encoder and decoder, commonly used in latent diffusion pipelines (Rombach et al., 2022). Differently, here, the target distribution map is explicitly conditional, aligning our formulation with recent latent-space conditioning approaches that embed semantic information directly into the latent representation (Wu et al., 2024; Leng et al., 2025; Yao et al., 2025).</p>
-      </ul>
-      <img src="https://rpp.pe/politica/elecciones/huancayo-jee-investiga-a-cesar-acuna-por-presunta-infraccion-de-neutralidad-electoral-noticia-1656616" alt="articulo2" width="400">
-      <li><h2 id="noticia2">CAR-Flow: Condition-Aware Reparameterization Aligns Source and Target for Better Flow Matching</h2></li>
-      <ul>
-        <li><h3>Introduction</h3></li>
-        <p>Conditional generative models enable to draw samples conditioned on an external variable—for example, a class label, a text caption, or a semantic mask. They are a key technology that has advanced significantly in the last decade, from variational auto-encoders (VAEs) (Kingma and Welling, 2014) and generative adversarial nets (Goodfellow et al., 2014) to diffusion (Ho et al., 2020; Song et al., 2021a, b; Dhariwal and Nichol, 2021; Peebles and Xie, 2023; Rombach et al., 2022; Nichol and Dhariwal, 2021) and flow-matching (Ma et al., 2024; Liu et al., 2023; Lipman et al., 2023; Albergo and Vanden-Eijnden, 2023; Albergo et al., 2023).</p>
-        <br>
-        <p>State-of-the-art diffusion and flow-matching frameworks accomplish conditional generation by using a trained deep net to trace a probability path that progressively transforms samples from a simple source distribution into the rich, condition-dependent target distribution. A popular choice for the source distribution is a single, condition-agnostic standard Gaussian, independent of the condition. Consequently, the conditioning signal enters only through the network itself: in flow matching, for instance, the model predicts a velocity field where the condition is commonly incorporated via embeddings or adaptive normalization layers. Although this strategy has enabled impressive results, this design forces the network to shoulder two tasks simultaneously—(i) transporting probability mass to the correct region of the data manifold, and (ii) encoding the semantic meaning of the condition. Because different conditions often occupy distant parts of that manifold, the dual burden stretches the learned trajectory, slows convergence, and can impair sample quality and diversity.</p>
-        <br>
-        <p>In this paper, we alleviate this burden by letting the distributions themselves depend on the condition. First, we endow the source distribution with condition-awareness through a lightweight map, i.e., the source distribution map. Hence, every condition has its own source distribution. The same idea can be mirrored to the target distribution using another lightweight map, i.e., the target distribution map, that we require to be approximately invertible to keep sampling tractable. The resulting push-forward chain is illustrated in Figure 1. Intuitively, the target distribution map and its approximated inverse correspond to the encoder and decoder, commonly used in latent diffusion pipelines (Rombach et al., 2022). Differently, here, the target distribution map is explicitly conditional, aligning our formulation with recent latent-space conditioning approaches that embed semantic information directly into the latent representation (Wu et al., 2024; Leng et al., 2025; Yao et al., 2025).</p>
-      </ul>
-      <img src="https://ichef.bbci.co.uk/news/1024/cpsprodpb/381f/live/ad907870-9899-11f0-9b4d-3db5bd560027.jpg.webp" alt="articulo2" width="400">
+      <li><h2 id="noticia_internacional1">Ukraine is only the first’, Zelenskyy warns UN as he highlights global threats — as it happened</h2></li>
+      <p>Durante la asamblea general de la ONU, el presidente ucraniano Volodymyr Zelenskyy advirtió que Ucrania podría ser sólo el primer objetivo de una amenaza más amplia, instando a los líderes mundiales a defender el orden internacional y rechazar que el poder se imponga mediante la fuerza.Zelenskyy afirmó que la paz requiere más que alianzas y armas: mecanismos de seguridad efectivos para todos los países.En su discurso, también hizo énfasis en cómo Rusia continúa con tácticas híbridas, asociaciones con regímenes autoritarios, y acciones agresivas que podrían inspirar futuros conflictos en otras regiones.</p>
+      <img src="https://i.guim.co.uk/img/media/683af768ddcf5deba163461dff47c0a4f652a28e/319_0_3201_2560/master/3201.jpg?width=1900&dpr=1&s=none&crop=none"  width="500">
+      <li><h2 id="noticia_internacional2">Mali, Burkina Faso and Niger announce exit from International Criminal Court</h2></li>
+      <p>Los gobiernos militares de Mali, Burkina Faso y Niger han anunciado que se retirarán de la Corte Penal Internacional (CPI), criticando al tribunal como “instrumento de represión neocolonial”.Esta decisión se produce en medio del distanciamiento de estas naciones con Occidente y su alineamiento con Rusia.Aunque el proceso de retirada requerirá al menos un año, las declaraciones reflejan un cambio importante en la geopolítica de África occidental.</p>
+      <img src="https://www.reuters.com/resizer/v2/G3LTAFSILFOZRKP7GWSWSEKBJM.jpg?auth=606655260ec4c8e3fe52baafed39966b7c823c2ba8150d78e48f4fb20bf8b9b9&width=640&quality=80"  width="500">
+      <li><h2 id="noticia_nacional1">Huancayo: JEE investiga a César Acuña por presunta infracción de neutralidad electoral</h2></li>
+      <p>El Jurado Electoral Especial de Huancayo abrió investigación contra el gobernador César Acuña por presunta infracción al principio de neutralidad electoral. Durante un mitin en el parque Huamanmarca el 20 de septiembre, se usaron símbolos de Alianza para el Progreso, lo que podría constituir propaganda indebida. Además, el evento estuvo marcado por protestas donde le arrojaron huevos. El JEE le dio un día de plazo para presentar descargos; de confirmarse la falta, el caso se derivaría a la Contraloría, Ministerio Público y Consejo Regional.</p>
+      <img src="https://f.rpp-noticias.io/2025/09/24/490449_1795240.jpg?imgdimension=n_xlarge" width="500">
+      <li><h2 id="noticia_nacional2">Ayacucho: la actriz Magaly Solier hospitalizada por intoxicación</h2></li>
+      <p>Ayacucho, debido a un cuadro de intoxicación. Fue ingresada a la unidad de trauma shock y se encuentra bajo observación médica. Está acompañada por su madre, y los médicos han informado que su estado es estable, aunque continúa en evaluación.</p>
+      <img src="https://f.rpp-noticias.io/2025/09/23/153115_1795118.jpg?imgdimension=n_xlarge" alt="articulo1" width="500">
       
     </ol>
   </main>
   <footer>
       <p>&copy; 2025 Laboratorio de Introducción al Desarrollo Web</p>
       <p>Contacto: lgarciada@unsa.edu.pe</p>
+      <p>Año: 2025</p>
   </footer>
 </body>
 </html>
