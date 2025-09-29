@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<header>
+    <nav>
+      <h1>VALIDACION</h1>
+      <ul>
+        <li><a href="/laboratorio06/index.html">index.html</a></li>
+        <li><a href="/laboratorio06/registro.html">registro.html</a></li>
+        <li><a href="/laboratorio06/lenguajes.html">lenguajes.html</a></li>
+        <li><a href="/laboratorio06/cursos.html">cursos.html</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form action="#" method="post">
+      <label for="correo">Correo:</label>
+      <input type="email" name="correo" id="correo" placeholder="usuario@correo.com" required>
+      <label for="promocion"></label>
+      <br>
+      <label for="contraseña">Contraseña:</label>
+      <input type="password" name="contraseña" id="contraseña" pattern=".{6,12}" required>
+      <br>
+      <label for="contraseña">Confirmar contraseña:</label>
+      <input type="password" name="confirmar_contraseña" id="confirmar_contraseña" pattern=".{6,12}" required>
+    </form>
+  </main>
+  <footer>
+      <p>&copy; 2025 Laboratorio de Introducción al Desarrollo Web</p>
+      <p>Contacto: lgarciada@unsa.edu.pe</p>
+  </footer>
+  
+</body>
+</html>

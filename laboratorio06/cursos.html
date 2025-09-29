@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<header>
+    <nav>
+      <h1>CURSOS</h1>
+      <ul>
+        <li><a href="/laboratorio06/index.html">index.html</a></li>
+        <li><a href="/laboratorio06/registro.html">registro.html</a></li>
+        <li><a href="/laboratorio06/lenguajes.html">lenguajes.html</a></li>
+        <li><a href="/laboratorio06/validacion.html">validacion.html</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Formulario de inscripción a un curso</h2>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required><br>
+      <label for="dni">Documento de identidad:</label>
+      <input type="text" id="dni" name="dni" required><br>
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" placeholder="usuario@correo.com" required><br>
+      <label for="curso">Selección de curso:</label>
+      <select id="curso" name="curso" required>
+        <option value="curso1">Curso 1</option>
+        <option value="curso2">Curso 2</option>
+        <option value="curso3">Curso 3</option>
+      </select><br>
+      <label>Modalidad:</label>
+      <input type="radio" id="presencial" name="modalidad" value="Presencial" required>
+      <label for="presencial">Presencial</label>
+      <input type="radio" id="virtual" name="modalidad" value="Virtual">
+      <label for="virtual">Virtual</label><br>
+      <label>Horarios Disponibles:</label>
+      <input type="checkbox" id="mañana" name="horario" value="Mañana">
+      <label for="mañana">Mañana</label>
+      <input type="checkbox" id="tarde" name="horario" value="Tarde">
+      <label for="tarde">Tarde</label>
+      <input type="checkbox" id="noche" name="horario" value="Noche">
+      <label for="noche">Noche</label><br>
+      <label for="comentarios">Comentarios adicionales:</label><br>
+      <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea><br>
+      <button type="submit">Enviar</button>
+      <button type="reset">Restablecer</button>
+    </form>
+  </main>
+  <footer>
+      <p>&copy; 2025 Laboratorio de Introducción al Desarrollo Web</p>
+      <p>Contacto: lgarciada@unsa.edu.pe</p>
+  </footer>
+</body>
+</html>

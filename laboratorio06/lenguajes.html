@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/laboratorio05/styles.css">
+  <title>Gurú Hi Experience</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>LENGUAJES</h1>
+      <ul>
+        <li><a href="/laboratorio06/index.html">index.html</a></li>
+        <li><a href="/laboratorio06/registro.html">registro.html</a></li>
+        <li><a href="/laboratorio06/validacion.html">validacion.html</a></li>
+        <li><a href="/laboratorio06/cursos.html">cursos.html</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <label for="imagen">Sube tu foto de perfil:</label>
+    <input type="file" id="imagen" name="imagen" accept="image/*"/><br>
+    <label for="lenguajes">¿Qué lenguajes conoces?</label>
+    <select name="lenguajes" id="lenguajes">
+      <option value="html">Html</option>
+      <option value="css">Css</option>
+      <option value="javascript">JavaScript</option>
+      <option value="python">Python</option>
+      <option value="java">Java</option>
+    </select>
+    <br>
+    <label for="horas_programacion">¿Cuántas horas de programación estudias al día?</label>
+    <input id="horas_programacion" name="horas_programacion" type="number" placeholder="2.5"/>
+    <br>
+    <button type="save">Guardar</button>
+    
+  </main>
+  <footer>
+      <p>&copy; 2025 Laboratorio de Introducción al Desarrollo Web</p>
+      <p>Contacto: lgarciada@unsa.edu.pe</p>
+  </footer>
+</body>
+</html>
