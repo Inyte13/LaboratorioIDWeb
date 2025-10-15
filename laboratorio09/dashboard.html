@@ -10,15 +10,23 @@
       color: #fff;
       margin: 0;
       display: flex;
+      box-sizing: border-box;
+      height: 100vh;
       header{
         display: flex;
+        flex-direction: column;
+        max-width: 120px;
         justify-content: center;
-        align-items: center;
+        padding: 2rem;
+        background-color: #92d3;
         ul{
           display: flex;
           gap: 2rem;
-          justify-content: center;
           list-style-type: none;
+          flex-wrap: wrap;
+          max-width: 100px;
+          justify-content: start;
+          padding: 0;
           a{
             text-decoration: none;
             color: #fff;
@@ -26,22 +34,41 @@
         }
       }
       main{
-        padding: 0 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        article, aside{
-          background-color: #925;
-          padding: 1rem;
-          border-radius: 10px;
-        }
-        aside{
+        display: grid;
+        grid-template-areas: "numero1 numero2 numero3 numero4" "grafico1 grafico1 grafico1 grafico3" "grafico2 grafico2 grafico2 grafico3";
+        .numero1 { grid-area: numero1; }
+        .numero2 { grid-area: numero2; }
+        .numero3 { grid-area: numero3; }
+        .numero4 { grid-area: numero4; }
+        .grafico1 { grid-area: grafico1; }
+        .grafico2 { grid-area: grafico2; }
+        .grafico3 { grid-area: grafico3; }
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+        width: 100%;
+        padding: 2rem;
+        gap: 2rem;
+        
+        article{
           background-color: #9d8;
-          color: #191919;
+          border: none;
+          border-radius: 10px;
+          text-align: center;
         }
-      }
-      footer{
-        text-align: center;
+        .grafico1, .grafico2, .grafico3{
+          border: none;
+          border-radius: 10px;
+          text-align: center;
+        }
+        .grafico1{
+          background-color: #92d;
+        }
+        .grafico2{
+          background-color: #99d;
+        }
+        .grafico3{
+          background-color: #29d;
+        }
       }
     }
   </style>
@@ -58,22 +85,27 @@
     </nav>
   </header>
   <main>
-    <article>
-      <h2>Articulo 1</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ipsa dolorum rem ab eos temporibus perspiciatis, distinctio vel, earum id officia sunt sint quasi. Amet porro ratione soluta quia ut.</p>
+    <article class="numero1">
+      <h2>Números 1</h2>
     </article>
-    <article>
-      <h2>Articulo 2</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore numquam harum maxime iure veniam ullam blanditiis, amet tempora ea est labore enim dolorum. Sit obcaecati delectus maiores ipsum doloribus.</p>
+    <article class="numero2">
+      <h2>Números 2</h2>
     </article>
-    <article>
-      <h2>Articulo 2</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore numquam harum maxime iure veniam ullam blanditiis, amet tempora ea est labore enim dolorum. Sit obcaecati delectus maiores ipsum doloribus.</p>
+    <article class="numero3">
+      <h2>Números 3</h2>
     </article>
-    <aside>
-      <h3>Publicidad</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore accusantium incidunt rem delectus, doloribus, consequuntur quae suscipit perspiciatis corporis commodi magnam maxime totam quisquam accusamus, alias neque reiciendis? Perspiciatis, cumque.</p>
-    </aside>
+    <article class="numero4">
+      <h2>Números 4</h2>
+    </article>
+    <div class="grafico1">
+      <h2>Grafico 1</h2>
+    </div>
+    <div class="grafico2">
+      <h2>Grafico 2</h2>
+    </div>
+    <div class="grafico3">
+      <h2>Grafico 3</h2>
+    </div>
   </main>
 </body>
 </html>
