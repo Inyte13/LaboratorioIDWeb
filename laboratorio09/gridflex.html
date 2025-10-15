@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: #191919;
+      color: #fff;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+      justify-items: center;
+      header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul{
+          display: flex;
+          gap: 2rem;
+          justify-content: center;
+          list-style-type: none;
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+      main{
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 1000px;
+        article, aside{
+          background-color: #925;
+          padding: 1rem;
+          border-radius: 10px;
+        }
+        aside{
+          background-color: #9d8;
+          color: #191919;
+        }
+      }
+      footer{
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Articulos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>Articulo 1</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ipsa dolorum rem ab eos temporibus perspiciatis, distinctio vel, earum id officia sunt sint quasi. Amet porro ratione soluta quia ut.</p>
+    </article>
+    <article>
+      <h2>Articulo 2</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore numquam harum maxime iure veniam ullam blanditiis, amet tempora ea est labore enim dolorum. Sit obcaecati delectus maiores ipsum doloribus.</p>
+    </article>
+    <article>
+      <h2>Articulo 2</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem tempore numquam harum maxime iure veniam ullam blanditiis, amet tempora ea est labore enim dolorum. Sit obcaecati delectus maiores ipsum doloribus.</p>
+    </article>
+    <aside>
+      <h3>Publicidad</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore accusantium incidunt rem delectus, doloribus, consequuntur quae suscipit perspiciatis corporis commodi magnam maxime totam quisquam accusamus, alias neque reiciendis? Perspiciatis, cumque.</p>
+    </aside>
+  </main>
+  <footer>
+    <p>&copy; 2025 Mi blog</p>
+  </footer>
+</body>
+</html>
