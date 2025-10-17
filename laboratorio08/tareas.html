@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li.tarea:hover{
+      background-color: #888;
+      cursor: pointer;
+    }
+    li.tarea:nth-child(even){
+      color: #444;
+    }
+    li.tarea::before{
+      content: "==>";
+    }
+    li.hecha::after{
+      content: "\/";
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/laboratorio08/favoritos.html">favoritos.html</a></li>
+        <li><a href="/laboratorio08/index.html">index.html</a></li>
+        <li><a href="/laboratorio08/selectores.html">selectores.html</a></li>
+      </ul>
+    </nav>
+  </header>
+  <ol>
+    <li class="hecha tarea">Programar</li>
+    <li class="tarea">Estudiar</li>
+    <li class="tarea">Caminar</li>
+  </ol>
+</body>
+</html>

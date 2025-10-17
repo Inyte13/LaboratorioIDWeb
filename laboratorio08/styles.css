@@ -1,0 +1,31 @@
+h1{
+  text-align: center;
+}
+p::first-line{
+  font-weight: bold;
+}
+p::first-letter{
+  font-size: 3em;
+  font-family: "Old English Text MT","Goudy Old Styel",serif;
+  float: left;
+  line-height: 0.5;
+  margin-right: 8px;
+  color: #800;
+}
+::selection{
+  background: #ff0;
+  color: #f00;
+}
+.servicios{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.servicios::before{
+  content: "-->";
+  color: #00f;
+}
+.servicios::after{
+  content: "<--";
+  color: #0f0;
+}

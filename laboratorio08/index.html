@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    p::first-line{
+      font-weight: bold;
+    }
+    p::first-letter{
+      font-size: 3em;
+      font-family: "Old English Text MT","Goudy Old Styel",serif;
+      float: left;
+      line-height: 0.5;
+      margin-right: 8px;
+      color: #800;
+    }
+    ::selection{
+      background: #ff0;
+      color: #f00;
+    }
+    .servicios{
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .servicios::before{
+      content: "-->";
+      color: #00f;
+    }
+    .servicios::after{
+      content: "<--";
+      color: #0f0;
+    }
+  </style>
+</head>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/laboratorio08/favoritos.html">favoritos.html</a></li>
+        <li><a href="/laboratorio08/selectores.html">selectores.html</a></li>
+        <li><a href="/laboratorio08/tareas.html">tareas.html</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+  <h1>Presentación</h1>
+  <p>
+    La primera letra de este párrafo se verá en estilo gótico, como en los libros antiguos
+    <br><br>
+    Selecciona el texto y ve el resultado.
+  </p>
+  <h2 class="servicios">Nuestros servicios</h2>
+  
+</body>
+</html>
