@@ -13,8 +13,5 @@ if(edad>=60){
   condicion="Adolescente"
 }else if(edad>=0){
   condicion="Niño"
-}else{
-  console.log("Ingrese una edad válida")
-  return 
 }
 console.log(`Su condición es de ${condicion}`)
