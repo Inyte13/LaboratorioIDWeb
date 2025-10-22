@@ -11,15 +11,15 @@ do{
     (3) Salir`))
   switch(input){
     case 1:
-      console.log("Calculando el área del círculo")
+      alert("Calculando el área del círculo")
       break
     case 2:
-      console.log("Calculando el área del rectángulo")
+      alert("Calculando el área del rectángulo")
       break
     case 3:
-      console.log("Gracias por usar nuestros servicios")
+      alert("Gracias por usar nuestros servicios")
       break
     default:
-      console.log("Ingrese un número válido")
+      alert("Ingrese un número válido")
   }
 }while(input!==3)
