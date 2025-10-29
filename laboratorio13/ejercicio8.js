@@ -1,9 +1,3 @@
-function contarPalabras(str){
-  let arr=str.toLowerCase().split(" ")
-  let map=new Map()
-  arr.forEach(item=>{
-    map.set(item,(map.get(item)===undefined?0:map.get(item))+1)
-  })
-  return map
-}
-console.log(contarPalabras("sol luna sol sol estrella luna"))
+let map=new Map([["Leche", 18],["Manzana",22.5],["Platano",19.1]])
+let total=[...map.values()].reduce((acc,item)=>acc+=item,0)
+console.log(total)
