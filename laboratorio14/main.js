@@ -1,1 +1,1 @@
-import "./ejercicio10.js"
+import "./ejercicio11.js"
