@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const section=document.querySelector("section")
+    const h2=document.createElement("h2")
+    h2.textContent="Título nuevo"
+    const p=document.createElement("p").textContent="Descripción generada"
+    const ul=document.createElement("ul")
+    let arr=[1,2,3]
+    arr.forEach(i=>{
+      const li=document.createElement("li")
+      li.textContent=`li nro ${i}`
+      ul.appendChild(li) 
+    })
+    section.appendChild(h2)
+    section.appendChild(ul)
+    section.querySelectorAll("h2")[0].remove()
+  </script>
+</head>
+<body>
+  <section>
+    <h2>h2 original</h2>
+  </section>
+</body>
+</html>

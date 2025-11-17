@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const divs=document.querySelectorAll("div")
+    const p=document.createElement("p")
+    p.textContent=`Hay ${divs.length} divs`
+    document.body.appendChild(p)
+  </script>
+</head>
+<body>
+  <section>
+    <div>Div 1</div>
+    <div>Div 2</div>
+  </section>
+  <article>
+    <div>Div 3</div>
+  </article>
+</body>
+</html>

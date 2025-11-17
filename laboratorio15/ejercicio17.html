@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const div=document.querySelector("div")
+    const parrafos=Array.from(div.querySelectorAll("p"))
+    parrafos.sort((a,b)=>a.textContent.localeCompare(b.textContent))
+    parrafos.forEach(p=>div.appendChild(p))
+  </script>
+</head>
+<body>
+  <div>
+    <p>d</p>
+    <p>f</p>
+    <p>s</p>
+    <p>a</p>
+  </div>
+</body>
+</html>
