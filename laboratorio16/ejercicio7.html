@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const form=document.querySelector("form")
+    const ol=document.querySelector("ol")
+    form.addEventListener("submit",(e)=>{
+      const input=document.querySelector("input")
+      e.preventDefault()
+      const li=document.createElement("li")
+      li.textContent=input.value
+      ol.appendChild(li)
+    })
+    const btnEliminar=document.querySelector("#eliminar")
+    btnEliminar.addEventListener("click",()=>{
+      ol.lastElementChild.remove()
+    })
+  </script>
+</head>
+<body>
+  <ol>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+  </ol>
+  <form>
+    <input type="text" placeholder="Añadir elemento">
+    <button type="submit">Añadir a la lista</button>
+  </form>
+  <button id="eliminar">Eliminar último elemento de la lista</button>
+</body>
+</html>
