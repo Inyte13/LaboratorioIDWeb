@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    let count=0
+    const btnMenos=document.querySelector(".menos")
+    const btnMas=document.querySelector(".mas")
+    const span=document.querySelector("span")
+    const mensaje=document.querySelector("p")
+    function renderCount(){
+      span.textContent=count
+      mensaje.textContent=""
+    }
+    btnMenos.addEventListener("click",()=>{
+      if(count>0){
+        count=count-1
+        renderCount()
+      }else{
+        mensaje.textContent="El contador no puede ser menor que 0"
+      }
+    })
+    btnMas.addEventListener("click",()=>{
+      count++
+      renderCount()
+    })
+  </script>
+</head>
+<body>
+  <span>0</span>
+  <p></p>
+  <button class="menos">-</button>
+  <button class="mas">+</button>
+</body>
+</html>

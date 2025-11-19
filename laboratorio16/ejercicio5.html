@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const body=document.querySelector("body")
+    const btn=document.querySelector("button")
+    btn.addEventListener("click",()=>{
+      body.classList.toggle("oscuro")
+    })
+  </script>
+  <style>
+    .oscuro{
+      background-color: #191919;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hola mundo!</h1>
+  <button>Cambiar modo</button>
+</body>
+</html>
