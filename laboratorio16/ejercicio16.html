@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const productos=[
+      {nombre: "Leche",precio: 3.23},
+      {nombre: "Azúcar", precio: 4.29}
+    ]
+    const json=JSON.stringify(productos)
+    const productosObj=JSON.parse(json)
+    const ul=document.querySelector("ul")
+    productosObj.forEach(p => {
+      const li=document.createElement("li")
+      li.textContent=p.nombre
+      ul.appendChild(li)
+    })
+  </script>
+</head>
+<body>
+  <ul>
+
+  </ul>
+</body>
+</html>

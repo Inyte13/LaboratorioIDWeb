@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const usuario={
+      nombre: "Oriana",
+      correo: "orianadpila@example.com",
+      rol: "estudiante"
+    }
+    localStorage.setItem("usuario",JSON.stringify(usuario))
+    const usuarioLS=JSON.parse(localStorage.getItem("usuario"))
+    const p=document.querySelector("p")
+    p.textContent=`${usuarioLS.nombre},${usuarioLS.correo},${usuarioLS.rol}`
+  </script>
+</head>
+<body>
+  <p></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const btnMove=document.querySelectorAll("button")[0]
+    const btnClass=document.querySelectorAll("button")[1]
+    const dv=document.querySelector("div")
+    btnMove.addEventListener("click",()=>{
+      dv.classList.add("mover")
+    })
+    btnClass.addEventListener("click",()=>{
+      dv.classList.remove("mover")
+    })
+  </script>
+  <style>
+    div{
+      background-color: #183;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      left: 0;
+      transition: left 0.5s ease;
+    }
+    .mover{
+      left: 330px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  <button>Mover</button>
+  <button>Quitar class</button>
+</body>
+</html>

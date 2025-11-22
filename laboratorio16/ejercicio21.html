@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const tareasJSON = `
+      [
+        {"titulo": "tarea1", "completada": true},
+        {"titulo": "tarea2", "completada": false},
+        {"titulo": "tarea3", "completada": true}
+      ]`
+    const tareas=JSON.parse(tareasJSON)
+    const ul=document.querySelector("ul")
+    tareas.forEach(t => {
+      const li=document.createElement("li")
+      li.textContent=t.titulo
+      li.style.color = t.completada ? "#0f0" : "#f00"
+      ul.appendChild(li)
+    })
+    document.body.appendChild(ul)
+  </script>
+</head>
+<body>
+  <ul></ul>
+</body>
+</html>

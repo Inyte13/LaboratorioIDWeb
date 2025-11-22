@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const form=document.querySelector("form")
+    const name=document.querySelector("#name")
+    const age=document.querySelector("#age")
+    form.addEventListener("submit", (e)=>{
+      e.preventDefault()
+      const usuario={
+        nombre: name.value,
+        edad: age.value
+      }
+      const usuarioJSON=JSON.stringify(usuario)
+      console.log(usuarioJSON)
+    })
+  </script>
+</head>
+<body>
+  <form>
+    <input id="name" type="text" placeholder="Escriba su nombre">
+    <input id="age" type="number" min="1" max="130">
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

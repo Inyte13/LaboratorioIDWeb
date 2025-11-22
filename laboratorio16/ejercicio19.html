@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const librosJSON=`
+    [
+      {"titulo":"libro1","autor":"autor1"},
+      {"titulo":"libro2","autor":"autor2"},
+      {"titulo":"libro3","autor":"autor3"}
+    ]
+    `
+    const libros=JSON.parse(librosJSON)
+    libros[0].titulo="La divina comedia"
+    const librosJSON2=JSON.stringify(libros)
+    console.log(librosJSON2)
+  </script>
+</head>
+<body>
+</body>
+</html>

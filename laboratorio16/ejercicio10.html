@@ -5,11 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script type="module">
-
+    const productos=[
+      {nombre:"Laptop",precio:3500},
+      {nombre:"Mouse",precio:80}
+    ]
+    const btn=document.querySelector("button")
+    btn.addEventListener("click",()=>{
+      const tabla=document.createElement("table")
+      const tr=document.createElement("tr")
+      Object.keys(productos[0]).forEach((e)=>{
+        const th=document.createElement("th")
+        th.textContent=e
+        tr.appendChild(th)
+      })
+      tabla.appendChild(tr)
+      productos.forEach((p)=>{
+        const tr=document.createElement("tr")
+        Object.values(p).forEach((e)=>{
+          const td=document.createElement("td")
+          td.textContent=e
+          tr.appendChild(td)
+        })
+        tabla.appendChild(tr)
+      })
+      document.body.appendChild(tabla)
+    })
   </script>
+  <style>
+    table,td{
+      border: 1px solid #191919;
+    }
+  </style>
 </head>
 <body>
-  
-  
+  <button>Generar tabla</button>
 </body>
 </html>

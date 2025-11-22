@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    const name=document.querySelector("#name")
+    const age=document.querySelector("#age")
+    const form=document.querySelector("form")
+    const tabla=document.querySelector("table")
+    form.addEventListener("submit",(e)=>{
+      e.preventDefault()
+      const tr=document.createElement("tr")
+      tabla.appendChild(tr)
+      agregarElemento(tabla,tr,name)
+      agregarElemento(tabla,tr,age)
+      const btnEditar=document.createElement("button")
+      btnEditar.textContent="Editar"
+      btnEditar.dataset.action="edit"
+      tr.appendChild(btnEditar)
+      document.body.appendChild(tabla)
+      const btnDelete=document.createElement("button")
+      btnDelete.textContent="Eliminar"
+      btnDelete.dataset.action="delete"
+      tr.appendChild(btnDelete)
+    })
+    function agregarElemento(tabla,tr,item){
+      const td=document.createElement("td")
+      td.textContent=item.value
+      tr.appendChild(td)
+    }
+    tabla.addEventListener("click", (e) => {
+      const action = e.target.dataset.action
+      if (!action){
+        return
+      } 
+      const fila = e.target.closest("tr")
+      if (action === "delete") {
+        fila.remove()
+      }
+      if (action === "edit") {
+        const celdas=fila.querySelectorAll("td")
+        celdas[0].textContent=prompt("Ingrese el nuevo nombre: ")
+        celdas[1].textContent=prompt("Ingrese la nueva edad: ")
+      }
+    })
+  </script>
+</head>
+<body>
+  <form>
+    <input id="name" type="text" placeholder="Escriba su nombre">
+    <input id="age" type="number" min="1" max="130">
+    <button type="submit">Enviar</button>
+  </form>
+  <table>
+    <tr>
+      <th>nombre</th>
+      <th>age</th>
+    </tr>
+  </table>
+</body>
+</html>
