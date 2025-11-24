@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const fx = () => {
+      try {
+        console.log(x)
+      } catch (e) {
+        console.log("Nivel 2 atrapó el error:", e.message)
+        throw e
+      }
+    }
+    const fx2 = () => {
+      try {
+        fx()
+      } catch (e) {
+        console.log("Nivel 1 atrapó el error:", e.message)
+        throw e 
+      }
+    }
+    try {
+      fx2()
+    } catch (e) {
+      console.log("ERROR FINAL capturado en el niver superior:", e.message)
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

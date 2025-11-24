@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    try {
+      const x = null
+      x.nombre
+    } catch (e) {
+      if (e instanceof TypeError) {
+        console.log("Es un TypeError")
+      } else {
+        console.log("No es un TypeError")
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
