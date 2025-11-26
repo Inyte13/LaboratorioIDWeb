@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const cargarUsuario = async () => {
+      try {
+        const respuesta = await fetch("https://jsonplaceholder.typicode.com/users/10")
+        const user = await respuesta.json()
+        console.log("Name:", user.name)
+        console.log("Name:", user.username)
+        console.log("Name:", user.email)
+      } catch (e) {
+        console.log(e)
+      }
+    }
+    cargarUsuario()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
