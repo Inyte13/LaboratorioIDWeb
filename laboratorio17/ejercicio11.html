@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const dividirAsync = ((a, b, fx) => {
+      setTimeout(() => {
+        if (b === 0) {
+          fx(new Error("No se puede dividir sobre cero"), null)
+        } else {
+          fx(null, a / b)
+        }
+      }, 1500)
+    })
+    dividirAsync(10, 0, (e, resultado) => {
+      if (e) {
+        console.log("Error:", e.message)
+      } else {
+        console.log("Resultado:", resultado)
+      }
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

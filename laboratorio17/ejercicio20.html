@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const procesarLista = (arr) => {
+      return new Promise((resolve) => {
+        let count = 0
+        arr.forEach((num) => {
+          setTimeout(() => {
+            console.log("Procesando", num)
+            count++
+            if (count === arr.length) resolve("Proceso completado")
+          }, Math.floor(Math.random() * (1500 - 500 + 1)) + 500)
+        })
+      })
+    }
+    async function fx() {
+      const msg = await procesarLista([34, 234, 43, 23])
+      console.log(msg)
+    }
+    fx()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

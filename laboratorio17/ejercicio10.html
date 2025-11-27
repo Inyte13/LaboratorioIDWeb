@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const cargarUsuario = (fx) => {
+      setTimeout(() => {
+        fx({id: 1, nombre: "Juancito"})
+      }, Math.floor(Math.random() * (1500 - 800 + 1)) + 800)
+    }
+    cargarUsuario((user) => {
+      console.log(`Usuario cargado: ${user.nombre} (ID: ${user.id})`)
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

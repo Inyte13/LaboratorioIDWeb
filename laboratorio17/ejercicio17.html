@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const cargarMensaje = () => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("Mensaje cargado")
+        }, 1000)
+      })
+    }
+    async function fx() {
+      console.log(await cargarMensaje())
+    }
+    fx()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

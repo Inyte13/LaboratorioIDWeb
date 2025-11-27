@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const dividirAsync = (a, b) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (b === 0) reject(new Error("No se puede dividir sobre cero"))
+          else resolve(a / b)
+        }, 1500)
+      })
+    }
+    async function fx() {
+      try {
+        const r = await dividirAsync(10, 0)
+        console.log("Resultado:", r)
+      } catch (err) {
+        console.log("Error:", err.message)
+      }
+    }
+
+    fx()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const procesarLista = (arr, fx) => {
+      let count
+      arr.forEach(item => {
+        setTimeout(() => {
+          console.log("Procesando",item)
+          count++
+          if (count === arr.length) {
+            fx("Proceso completado")
+          }
+        }, Math.floor(Math.random() * (1500 - 500 + 1)) + 500)
+      })
+    }
+    procesarLista([34, 234, 43, 23], (item) => {
+      console.log(item)
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
