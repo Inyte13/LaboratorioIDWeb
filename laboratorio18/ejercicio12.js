@@ -1,0 +1,1 @@
+console.log("<h1>Hola</h1>".replace(/<\/?[^>]+>/g, "")) 
