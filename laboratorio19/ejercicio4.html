@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" >
+    const id = parseInt(prompt("Ingrese el id del pokemon:"))
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then(response => response.json())
+      .then(pokemon => {
+        console.log("Altura:", pokemon.height)
+        console.log("Peso:", pokemon.weight)
+      })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
