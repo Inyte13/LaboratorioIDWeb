@@ -1,6 +1,0 @@
-import "./aplicar-empleos.js"
-import "./agregar-empleos.js"
-import "./filtrar-ubicacion.js"
-import "./filtrar-experiencia.js"
-import "./filtrar-tecnologia.js"
-import "./avatar.js"
